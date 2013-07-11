@@ -31,7 +31,7 @@ public class HmsView extends LinearLayout {
                 Typeface.createFromAsset(context.getAssets(), "fonts/AndroidClockMono-Thin.ttf");
 
         // Init defaults
-        mTextColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
+        mTextColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
     }
 
     public void setTheme(int themeResId) {

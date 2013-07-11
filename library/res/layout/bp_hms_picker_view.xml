@@ -8,8 +8,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-        <com.doomonafireball.betterpickers.timepicker.TimerView
-                android:id="@+id/timer_time_text"
+        <com.doomonafireball.betterpickers.hmspicker.HmsView
+                android:id="@+id/hms_text"
                 android:layout_width="0dip"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
@@ -20,59 +20,76 @@
                 android:baselineAligned="false"
                 android:gravity="top">
             <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
-                    android:id="@+id/hours_tens"
-                    android:singleLine="true"
-                    android:ellipsize="none"
-                    style="@style/medium_bold"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
                     android:id="@+id/hours_ones"
                     android:singleLine="true"
                     android:ellipsize="none"
-                    style="@style/medium_bold"
+                    style="@style/medium_bold_hms"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
             <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
-                    android:id="@+id/hours_seperator"
-                    android:singleLine="true"
-                    android:ellipsize="none"
-                    style="@style/medium_light"
-                    android:text="@string/time_picker_time_seperator"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
-                    android:id="@+id/minutes_tens"
-                    android:singleLine="true"
-                    android:ellipsize="none"
-                    style="@style/medium_bold"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
-                    android:id="@+id/minutes_ones"
-                    android:singleLine="true"
-                    android:ellipsize="none"
-                    style="@style/medium_bold"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
-                    android:id="@+id/ampm_label"
+                    android:id="@+id/hours_label"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:singleLine="true"
                     android:ellipsize="none"
                     style="@style/label"
                     android:gravity="top"
-                    android:text="@string/time_picker_ampm_label"/>
-        </com.doomonafireball.betterpickers.timepicker.TimerView>
+                    android:text="@string/hms_picker_hours_label"/>
+            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
+                    android:id="@+id/minutes_tens"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    style="@style/medium_bold_hms"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
+                    android:id="@+id/minutes_ones"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    style="@style/medium_bold_hms"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
+                    android:id="@+id/minutes_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    style="@style/label"
+                    android:gravity="top"
+                    android:text="@string/hms_picker_minutes_label"/>
+            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
+                    android:id="@+id/seconds_tens"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    style="@style/medium_light_hms"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
+                    android:id="@+id/seconds_ones"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    style="@style/medium_light_hms"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            <com.doomonafireball.betterpickers.ZeroTopPaddingTextView
+                    android:id="@+id/seconds_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    style="@style/label"
+                    android:gravity="top"
+                    android:text="@string/hms_picker_seconds_label"/>
+        </com.doomonafireball.betterpickers.hmspicker.HmsView>
         <ImageButton
                 android:id="@+id/delete"
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_backspace_dark"
-                android:background="@drawable/key_background_dark"
+                android:src="@drawable/bp_ic_backspace_dark"
+                android:background="@drawable/bp_key_background_dark"
                 android:contentDescription="@string/timer_delete"
                 android:layout_height="match_parent"/>
     </LinearLayout>
@@ -82,15 +99,15 @@
             android:layout_height="1dip"
             android:background="@color/default_divider_color_dark"/>
     <include
-            layout="@layout/three_keys_view"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/first"/>
     <include
-            layout="@layout/three_keys_view"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/second"/>
     <include
-            layout="@layout/three_keys_view"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/third"/>
     <include
-            layout="@layout/three_keys_view_leftright"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/fourth"/>
 </LinearLayout>

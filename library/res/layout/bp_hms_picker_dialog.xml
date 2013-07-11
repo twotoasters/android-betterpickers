@@ -4,8 +4,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <com.doomonafireball.betterpickers.timesliderpicker.TimeSliderPicker
-            android:id="@+id/time_picker"
+    <com.doomonafireball.betterpickers.hmspicker.HmsPicker
+            android:id="@+id/hms_picker"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     <View
@@ -23,7 +23,7 @@
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 style="@style/dialog_button"
-                android:background="@drawable/key_background_dark"
+                android:background="@drawable/bp_key_background_dark"
                 android:layout_height="wrap_content"/>
         <View
                 android:id="@+id/divider_2"
@@ -38,7 +38,7 @@
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 style="@style/dialog_button"
-                android:background="@drawable/key_background_dark"
+                android:background="@drawable/bp_key_background_dark"
                 android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>

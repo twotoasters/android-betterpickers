@@ -10,5 +10,6 @@
         <attr name="bpDividerColor" format="color"/>
         <attr name="bpKeyboardIndicatorColor" format="color"/>
         <attr name="bpDialogBackground" format="reference"/>
+        <attr name="bpDateDividerHeight" format="dimension" />
     </declare-styleable>
 </resources>

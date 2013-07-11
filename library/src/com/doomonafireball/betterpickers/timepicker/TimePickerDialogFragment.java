@@ -61,10 +61,10 @@ public class TimePickerDialogFragment extends DialogFragment {
 		setStyle(DialogFragment.STYLE_NO_TITLE, 0);
 
 		// Init defaults
-		mTextColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
-		mButtonBackgroundResId = R.drawable.button_background_dark;
+		mTextColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
+		mButtonBackgroundResId = R.drawable.bp_button_background_dark;
 		mDividerColor = getResources().getColor(R.color.default_divider_color_dark);
-		mDialogBackgroundResId = R.drawable.dialog_full_holo_dark;
+		mDialogBackgroundResId = R.drawable.bp_dialog_full_holo_dark;
 
 		if (mTheme != -1) {
 
@@ -80,7 +80,7 @@ public class TimePickerDialogFragment extends DialogFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-		View v = inflater.inflate(R.layout.time_picker_dialog, null);
+		View v = inflater.inflate(R.layout.bp_time_picker_dialog, null);
 		mSet = (Button) v.findViewById(R.id.set_button);
 		mCancel = (Button) v.findViewById(R.id.cancel_button);
 		mCancel.setOnClickListener(new View.OnClickListener() {

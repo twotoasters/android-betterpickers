@@ -71,15 +71,15 @@ public class TimePicker extends LinearLayout implements Button.OnClickListener, 
         mNoAmPmLabel = context.getResources().getString(R.string.time_picker_ampm_label);
 
         // Init defaults
-        mTextColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
-        mKeyBackgroundResId = R.drawable.key_background_dark;
-        mButtonBackgroundResId = R.drawable.button_background_dark;
+        mTextColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
+        mKeyBackgroundResId = R.drawable.bp_key_background_dark;
+        mButtonBackgroundResId = R.drawable.bp_button_background_dark;
         mDividerColor = getResources().getColor(R.color.default_divider_color_dark);
-        mDeleteDrawableSrcResId = R.drawable.ic_backspace_dark;
+        mDeleteDrawableSrcResId = R.drawable.bp_ic_backspace_dark;
     }
 
     protected int getLayoutId() {
-        return R.layout.time_picker_view;
+        return R.layout.bp_time_picker_view;
     }
 
     public void setTheme(int themeResId) {

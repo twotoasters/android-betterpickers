@@ -52,15 +52,15 @@ public class HmsPicker extends LinearLayout implements Button.OnClickListener, B
         layoutInflater.inflate(getLayoutId(), this);
 
         // Init defaults
-        mTextColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
-        mKeyBackgroundResId = R.drawable.key_background_dark;
-        mButtonBackgroundResId = R.drawable.button_background_dark;
+        mTextColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
+        mKeyBackgroundResId = R.drawable.bp_key_background_dark;
+        mButtonBackgroundResId = R.drawable.bp_button_background_dark;
         mDividerColor = getResources().getColor(R.color.default_divider_color_dark);
-        mDeleteDrawableSrcResId = R.drawable.ic_backspace_dark;
+        mDeleteDrawableSrcResId = R.drawable.bp_ic_backspace_dark;
     }
 
     protected int getLayoutId() {
-        return R.layout.hms_picker_view;
+        return R.layout.bp_hms_picker_view;
     }
 
     public void setTheme(int themeResId) {

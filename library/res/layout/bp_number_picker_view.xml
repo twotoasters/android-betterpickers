@@ -70,8 +70,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_backspace_dark"
-                android:background="@drawable/key_background_dark"
+                android:src="@drawable/bp_ic_backspace_dark"
+                android:background="@drawable/bp_key_background_dark"
                 android:contentDescription="@string/number_delete"
                 android:layout_height="match_parent"/>
     </LinearLayout>
@@ -81,15 +81,15 @@
             android:layout_height="1dip"
             android:background="@color/default_divider_color_dark"/>
     <include
-            layout="@layout/three_keys_view"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/first"/>
     <include
-            layout="@layout/three_keys_view"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/second"/>
     <include
-            layout="@layout/three_keys_view"
+            layout="@layout/bp_three_keys_view"
             android:id="@+id/third"/>
     <include
-            layout="@layout/three_keys_view_leftright"
+            layout="@layout/bp_three_keys_view_leftright"
             android:id="@+id/fourth"/>
 </LinearLayout>

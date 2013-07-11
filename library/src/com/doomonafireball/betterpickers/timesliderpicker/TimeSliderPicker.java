@@ -60,6 +60,7 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 	private int mKeyBackgroundResId;
 	private int mButtonBackgroundResId;
 	private int mDividerTitleColor;
+    private float mDividerHeight;
 	private int mKeyboardIndicatorColor;
 	private int mDeleteDrawableSrcResId;
 	private int mTheme = -1;
@@ -77,16 +78,17 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 		layoutInflater.inflate(getLayoutId(), this);
 
 		// Init defaults
-		mTextColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
-		mKeyBackgroundResId = R.drawable.key_background_dark;
-		mButtonBackgroundResId = R.drawable.button_background_dark;
+		mTextColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
+		mKeyBackgroundResId = R.drawable.bp_key_background_dark;
+		mButtonBackgroundResId = R.drawable.bp_button_background_dark;
 		mDividerTitleColor = getResources().getColor(R.color.default_divider_color_dark);
+        mDividerHeight = getResources().getDimension(R.dimen.divider_date_height);
 		mKeyboardIndicatorColor = getResources().getColor(R.color.default_keyboard_indicator_color_dark);
-		mDeleteDrawableSrcResId = R.drawable.ic_backspace_dark;
+		mDeleteDrawableSrcResId = R.drawable.bp_ic_backspace_dark;
 	}
 
 	protected int getLayoutId() {
-		return R.layout.time_slider_picker_view;
+		return R.layout.bp_time_slider_picker_view;
 	}
 
 	public void setTheme(int themeResId) {
@@ -98,6 +100,7 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 			mKeyBackgroundResId = a.getResourceId(R.styleable.BetterPickersDialogFragment_bpKeyBackground, mKeyBackgroundResId);
 			mButtonBackgroundResId = a.getResourceId(R.styleable.BetterPickersDialogFragment_bpButtonBackground, mButtonBackgroundResId);
 			mDividerTitleColor = a.getColor(R.styleable.BetterPickersDialogFragment_bpDividerTitleColor, mDividerTitleColor);
+            mDividerHeight = a.getDimension(R.styleable.BetterPickersDialogFragment_bpDateDividerHeight, mDividerHeight);
 			mKeyboardIndicatorColor = a.getColor(R.styleable.BetterPickersDialogFragment_bpKeyboardIndicatorColor, mKeyboardIndicatorColor);
 			mDeleteDrawableSrcResId = a.getResourceId(R.styleable.BetterPickersDialogFragment_bpDeleteIcon, mDeleteDrawableSrcResId);
 		}
@@ -123,6 +126,7 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 		}
 		if (mDivider != null) {
 			mDivider.setBackgroundColor(mDividerTitleColor);
+			mDivider.getLayoutParams().height = (int) mDividerHeight;
 		}
 		if (mHourLeft != null) {
 			mHourLeft.setTextColor(mTextColor);
@@ -185,19 +189,20 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 
 	private class KeyboardPagerAdapter extends PagerAdapter {
 
-		private LayoutInflater mInflater;
+		private final LayoutInflater mInflater;
 
 		public KeyboardPagerAdapter(LayoutInflater inflater) {
 			super();
 			mInflater = inflater;
 		}
 
-		public Object instantiateItem(ViewGroup collection, int position) {
+		@Override
+        public Object instantiateItem(ViewGroup collection, int position) {
 			View view;
 			Resources res = mContext.getResources();
 			if (position == PAGE_HOUR) {
 				// Hour
-				view = mInflater.inflate(R.layout.keyboard_left_right_text, null);
+				view = mInflater.inflate(R.layout.bp_keyboard_left_right_text, null);
 				View v1 = view.findViewById(R.id.first);
 				View v2 = view.findViewById(R.id.second);
 				View v3 = view.findViewById(R.id.third);
@@ -246,7 +251,7 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 
 			} else if (position == PAGE_MINUTE) {
 				// Year
-				view = mInflater.inflate(R.layout.keyboard_left_right_text, null);
+				view = mInflater.inflate(R.layout.bp_keyboard_left_right_text, null);
 				View v1 = view.findViewById(R.id.first);
 				View v2 = view.findViewById(R.id.second);
 				View v3 = view.findViewById(R.id.third);
@@ -705,9 +710,9 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 		mSetButton = b;
 		enableSetButton();
 	}
-	
+
 	public int getHour24h(){
-		
+
 		if (mIs24HoursMode) {
 			return getHour();
 		} else {
@@ -720,7 +725,7 @@ public class TimeSliderPicker extends LinearLayout implements Button.OnClickList
 			}
 		}
 	}
-	
+
 	public int getHour12h(){
 		if (mIs24HoursMode) {
 			if (getHour() == 0) {

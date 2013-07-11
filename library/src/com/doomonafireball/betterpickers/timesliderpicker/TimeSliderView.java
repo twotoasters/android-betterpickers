@@ -42,7 +42,7 @@ public class TimeSliderView extends PickerLinearLayout {
 		mOriginalAMPMTypeface = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Light.ttf");
 
 		// Init defaults
-		mTextColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
+		mTextColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
 
 		setWillNotDraw(false);
 	}

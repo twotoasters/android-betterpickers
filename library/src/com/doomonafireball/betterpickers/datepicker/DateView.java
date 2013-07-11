@@ -37,7 +37,7 @@ public class DateView extends PickerLinearLayout {
 		mOriginalNumberTypeface = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Bold.ttf");
 
 		// Init defaults
-		mTitleColor = getResources().getColorStateList(R.color.dialog_text_color_holo_dark);
+		mTitleColor = getResources().getColorStateList(R.color.bp_dialog_text_color_holo_dark);
 		
 		setWillNotDraw(false);
 	}
