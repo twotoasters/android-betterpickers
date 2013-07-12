@@ -17,7 +17,7 @@
 
 package com.doomonafireball.betterpickers;
 
-import android.support.v4.view.ViewPager;
+import uk.co.androidalliance.edgeeffectoverride.ViewPager;
 
 /**
  * A PageIndicator is responsible to show an visual indicator on the total views
