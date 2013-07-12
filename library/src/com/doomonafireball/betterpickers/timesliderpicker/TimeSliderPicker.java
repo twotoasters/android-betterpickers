@@ -2,6 +2,7 @@ package com.doomonafireball.betterpickers.timesliderpicker;
 
 import java.util.Calendar;
 
+import uk.co.androidalliance.edgeeffectoverride.ViewPager;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -9,7 +10,6 @@ import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
