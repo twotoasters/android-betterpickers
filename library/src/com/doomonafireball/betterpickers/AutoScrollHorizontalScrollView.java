@@ -1,5 +1,6 @@
 package com.doomonafireball.betterpickers;
 
+import uk.co.androidalliance.edgeeffectoverride.ContextWrapperEdgeEffect;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.HorizontalScrollView;
@@ -10,17 +11,18 @@ import android.widget.HorizontalScrollView;
 public class AutoScrollHorizontalScrollView extends HorizontalScrollView {
 
     public AutoScrollHorizontalScrollView(Context context) {
-        super(context);
+        super(new ContextWrapperEdgeEffect(context));
     }
 
     public AutoScrollHorizontalScrollView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        super(new ContextWrapperEdgeEffect(context), attrs);
     }
 
     public AutoScrollHorizontalScrollView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+        super(new ContextWrapperEdgeEffect(context), attrs, defStyle);
     }
 
+    @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
         this.fullScroll(FOCUS_RIGHT);

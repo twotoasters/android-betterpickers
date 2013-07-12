@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="2dip" />
 
-    <android.support.v4.view.ViewPager
+    <uk.co.androidalliance.edgeeffectoverride.ViewPager
         android:id="@+id/keyboard_pager"
         android:layout_width="match_parent"
         android:layout_height="@dimen/date_viewpager_height" />
